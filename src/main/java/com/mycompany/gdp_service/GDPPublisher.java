@@ -15,7 +15,8 @@ import com.mycompany.gdp_service.GDPImpl;
 public class GDPPublisher {
 
 public static void main(String[] args) {
-		   Endpoint.publish("http://localhost:8888/gdp", new GDPImpl());
+	 Integer port = Integer.valueOf(System.getenv("PORT"));
+		   Endpoint.publish("http://0.0.0.0:"+port+"/gdp", new GDPImpl());
 	    }
 
 	}
