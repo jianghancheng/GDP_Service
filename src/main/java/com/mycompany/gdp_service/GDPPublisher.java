@@ -16,8 +16,8 @@ public class GDPPublisher {
 
 public static void main(String[] args) {
 	 Integer port = Integer.valueOf(System.getenv("PORT"));
-	 s=String.valueOf(port);
-		   Endpoint.publish("http://0.0.0.0:"+s+"/gdp", new GDPImpl());
+
+		   Endpoint.publish("http://0.0.0.0:"+port+"/gdp", new GDPImpl());
 	    }
 
 	}
